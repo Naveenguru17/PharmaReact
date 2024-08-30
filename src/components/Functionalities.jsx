@@ -4,8 +4,8 @@ import React from 'react';
 
 function Functionalities() {
   return (
-    <div className="p-6 min-h-screen mt-10">
-      <div className="max-w-6xl mx-auto">
+    <div className="p-6 mt-10">
+      <div className="max-w-8xl mx-auto">
         <h2 className="text-3xl font-bold mb-10 text-center text-blue-900">Our Functionalities</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
           {/* Card 1: Model and Prediction */}

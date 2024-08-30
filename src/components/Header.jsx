@@ -12,7 +12,7 @@ function Header() {
 
   const getNavClass = (path) => {
     return location.pathname === path
-      ? "text-primary font-bold cursor-pointer"
+      ? "text-primary text-xl font-bold cursor-pointer"
       : "hover:text-secondary hover:font-bold transition-all cursor-pointer";
   };
 
