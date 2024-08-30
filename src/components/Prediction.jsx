@@ -59,11 +59,27 @@ function Prediction() {
     <div className="flex flex-col md:flex-row p-10">
       {/* Left side with paragraph */}
       <div className="md:w-1/2 md:pr-5 mb-6 md:mb-0">
-        <p>
-          This is a sample paragraph that will appear on the left side. You can add more text here
-          to describe something or provide information to the user.
-        </p>
-      </div>
+      <div className='text-2xl text-blue-900 md:text-3xl lg:text-4xl text-center font-semibold mb-5'>
+  Welcome to our prediction tool!
+</div>
+  <p className='text-xl text-gray-600'>
+    You can use this tool to forecast drug sales based on your selected frequency. Whether you need predictions for daily, weekly, or monthly intervals, simply choose the appropriate frequency from the dropdown menu. For daily predictions, select a specific date. For weekly predictions, provide a start and end date to get insights over a range. The tool will generate accurate forecasts based on the provided data, helping you make informed decisions. Explore the various options and leverage our predictions to stay ahead in the pharmaceutical market.
+  </p>
+  <div className="mt-8">
+    <h2 className="text-2xl font-semibold text-blue-900 mb-4">Drug Categories and Examples</h2>
+    <ul className="list-disc pl-5 text-gray-600">
+      <li><strong>M01AB - Anti-inflammatory Drugs:</strong> Ibuprofen, Naproxen, Diclofenac</li>
+      <li><strong>M01AE - Analgesic Drugs:</strong> Acetaminophen, Codeine, Oxycodone</li>
+      <li><strong>N02BA - Pain Relievers:</strong> Morphine, Codeine, Hydrocodone</li>
+      <li><strong>N02BE - Specific Pain Relievers:</strong> Hydrocodone-Acetaminophen, Oxycodone-Acetaminophen</li>
+      <li><strong>N05B - Psycholeptic Drugs:</strong> Diazepam, Lorazepam, Zolpidem</li>
+      <li><strong>N05C - Sedatives and Related Drugs:</strong> Alprazolam, Temazepam, Clonazepam</li>
+      <li><strong>R03 - Respiratory System Drugs:</strong> Albuterol, Fluticasone, Ipratropium</li>
+      <li><strong>R06 - Antihistamines:</strong> Loratadine, Cetirizine, Diphenhydramine</li>
+    </ul>
+  </div>
+</div>
+
 
       {/* Right side with input boxes */}
       <div className="md:w-1/2 md:pl-5">

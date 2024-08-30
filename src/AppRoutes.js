@@ -7,6 +7,7 @@ import DrugInformation from './components/DrugInformation';  // Adjust the path 
 import Home from './components/Home';
 import Prediction from './components/Prediction'; 
 import Header from './components/Header';
+import AboutUs from './components/AboutUs';
 // Import the Prediction component
 
 function AppRoutes() {
@@ -21,6 +22,7 @@ function AppRoutes() {
         <Route path="/forecasting/prediction" element={<Prediction />} /> 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/druginformation" element={<DrugInformation />} />
+        <Route path="/about" element={<AboutUs/>}/>
       </Routes>
       </div>
     </Router>

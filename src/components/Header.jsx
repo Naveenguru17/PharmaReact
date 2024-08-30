@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Header() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const getNavClass = (path) => {
+    return location.pathname === path
+      ? "text-primary font-bold cursor-pointer"
+      : "hover:text-secondary hover:font-bold transition-all cursor-pointer";
   };
 
   return (
@@ -18,33 +25,39 @@ function Header() {
         <ul className="hidden sm:flex gap-8 text-lg">
           <li
             onClick={() => navigate("/")}
-            className="hover:text-secondary hover:font-bold transition-all cursor-pointer"
+            className={getNavClass("/")}
           >
             Home
           </li>
           <li
             onClick={() => navigate("/about")}
-            className="hover:text-secondary hover:font-bold transition-all cursor-pointer"
+            className={getNavClass("/about")}
           >
             About us
           </li>
           <li
             onClick={() => navigate("/druginformation")}
-            className="hover:text-secondary hover:font-bold transition-all cursor-pointer"
+            className={getNavClass("/druginformation")}
           >
             Drugs
           </li>
           <li
             onClick={() => navigate("/forecasting")}
-            className="hover:text-secondary hover:font-bold transition-all cursor-pointer"
+            className={getNavClass("/forecasting")}
           >
             Forecasting
           </li>
-          <li
+          {/* <li
             onClick={() => navigate("/model")}
-            className="hover:text-secondary hover:font-bold transition-all cursor-pointer"
+            className={getNavClass("/model")}
           >
             Model
+          </li> */}
+          <li
+            onClick={() => navigate("/dashboard")}
+            className={getNavClass("/dashboard")}
+          >
+            Dashboard
           </li>
         </ul>
 
@@ -74,33 +87,39 @@ function Header() {
           <ul className="absolute top-16 left-0 w-full bg-blue-900 flex flex-col items-center sm:hidden gap-4 p-4">
             <li
               onClick={() => navigate("/")}
-              className="hover:text-primary hover:font-bold transition-all cursor-pointer"
+              className={getNavClass("/")}
             >
               Home
             </li>
             <li
               onClick={() => navigate("/about")}
-              className="hover:text-primary hover:font-bold transition-all cursor-pointer"
+              className={getNavClass("/about")}
             >
               About us
             </li>
             <li
               onClick={() => navigate("/druginformation")}
-              className="hover:text-primary hover:font-bold transition-all cursor-pointer"
+              className={getNavClass("/druginformation")}
             >
               Drugs
             </li>
             <li
               onClick={() => navigate("/forecasting")}
-              className="hover:text-primary hover:font-bold transition-all cursor-pointer"
+              className={getNavClass("/forecasting")}
             >
               Forecasting
             </li>
-            <li
+            {/* <li
               onClick={() => navigate("/model")}
-              className="hover:text-primary hover:font-bold transition-all cursor-pointer"
+              className={getNavClass("/model")}
             >
               Model
+            </li> */}
+            <li
+              onClick={() => navigate("/dashboard")}
+              className={getNavClass("/dashboard")}
+            >
+              Dashboard
             </li>
           </ul>
         )}
