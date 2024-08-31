@@ -8,6 +8,8 @@ import Home from './components/Home';
 import Prediction from './components/Prediction'; 
 import Header from './components/Header';
 import AboutUs from './components/AboutUs';
+import Signin from './components/Signin';
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 // Import the Prediction component
 
 function AppRoutes() {
